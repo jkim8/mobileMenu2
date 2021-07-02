@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOGI FRIENDS</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <script>
+
+        
+    </script>
+<style>
+    * {
+        font-family: 'Gamja Flower', cursive;    
+    }
+
+    body {
+    position: relative;
+    }
+
+    /* #navBar {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+
+    } */
+
+    span {
+        font-weight: 900;
+        font-size: 18px;
+    }
+
+    .categoryText {
+        font-size: 19px;
+    }
+
+    .list-group-item-dark {
+        color: white;
+        background-color: slategray;
+    }
+
+
+    .titleText {
+        font-weight: 900;
+        font-size: 22px;
+    }
+    .goToTheTop {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        background-color: teal;
+        z-index: 20;
+        border-radius: 50%;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding-top: 5px;
+        bottom: 20px;
+        right: 20px;
+        
+    }
+    img {
+        width: 100px;
+    }
+    p {
+      margin: 0;
+    }
+
+
+</style>
+</head>
+<body>
+    <div class="goToTheTop top" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navBar">
+        <div class="container-fluid">
+            
+          <a class="navbar-brand titleText" href="#"><img src="./image/logo.png" alt="">GOGI FRIENDS MENU</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading1" >APPETIZERS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading2">ENTREE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading3">ALL YOU CAN EAT(L)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading4">ALL YOU CAN EAT(D)</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading5">COMBO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading6">ADD ON</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+      <ul class="list-group" data-bs-spy="scroll" data-bs-target="#navBar"   data-bs-offset="30" class="scrollspy-example" tabindex="0">
+        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading1">APPETIZERS</li>
+        <li class="list-group-item" >
+          <div class="row">
+            <div class="col-9">
+              <span >FRIED CALAMARI</span>
+              <P>fried calamari</P>
+            </div>
+            <div class="col-3 text-end">
+              <span class="badge bg-warning text-dark">$11</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="row">
+            <div class="col-9">
+              <span >VEGI TEMPURA</span>
+              <P>야채 튀김 fried vegetables</P>
+            </div>
+            <div class="col-3 text-end">
+              <span class="badge bg-warning text-dark">$10</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="row">
+            <div class="col-9">
+              <span >MANDU</span>
+              <P>만두  house dumplings | steamed or fried    [5pc]/[10pc]</P>
+            </div>
+            <div class="col-3 text-end">
+              <span class="badge bg-warning text-dark">$7 / $13</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="row">
+            <div class="col-9">
+              <span >KIMCHI JUN</span>
+              <P>김치전  kimchi pancake</P>
+            </div>
+            <div class="col-3 text-end">
+              <span class="badge bg-warning text-dark">$9</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="row">
+            <div class="col-9">
+              <span >HAEMUL PAJUN</span>
+              <P>해물 파전 * seafood pancake</P>
+            </div>
+            <div class="col-3 text-end">
+              <span class="badge bg-warning text-dark">$10</span>
+            </div>
+          </div>
+        </li>
+
+
+
+        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading2">ENTREE</li>
+        <li class="list-group-item" ><span>BEEF BRISKET DOENJANG JJIGAE</span> |차돌 된장 찌개  soy bean paste soup with beef brisket    12</li>
+        <li class="list-group-item" ><spans>KIMCHI JJIGAE</spans> | 김치찌개  spicy kimchi soup, pork belly    13</li>
+        <li class="list-group-item" >YOOK KEH JANG | 육개장  spicy shredded brisket, vermicelli, veggies and egg  13</li>
+        <li class="list-group-item" >GALBI TANG | 갈비탕  beef short rib soup    15</li>
+        <li class="list-group-item" >GALBI DOLSOT BIBIMBAP | 갈비 돌솥 비빔밥  beef rib eye, vegetables, egg, stone pot    15</li>
+        <li class="list-group-item" >DOLSOT BIBIMBAP | 돌솥 비빔밥  vegetables, egg, stone pot    13</li>
+        <li class="list-group-item" >COLD NOODLE | 물냉면    13</li>
+        <li class="list-group-item" >SPICY COLD NOODLE | 비빔냉면   13</li>
+
+
+        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading3">ALL YOU CAN EAT LUNCH (11:00 AM – 3:00 PM)</li>
+        <li class="list-group-item list-group-item-secondary" id="scrollspyHeading3">ADULT $24 / PERSON, KIDS AGES 3 – 7 $12, AGES 8-10 $17</li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+
+        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading4">ALL YOU CAN EAT(D)</li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+
+
+        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading5">COMBO</li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+
+
+        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading6">ADD ON</li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+        <li class="list-group-item" ></li>
+
+
+
+ 
+      </ul>
+
+      <script>     
+         
+            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navBar'
+            })
+
+
+
+            $(".navbar-nav").click(function(){
+            $(".navbar-collapse").removeClass("show");
+            });
+
+
+   
+
+
+
+      </script>
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    $( document ).ready( function() {
+        $( window ).scroll( function() {
+        if ( $( this ).scrollTop() > 200 ) {
+            $( '.top' ).fadeIn();
+        } else {
+            $( '.top' ).fadeOut();
+        }
+        } );
+        $( '.top' ).click( function() {
+        $( 'html, body' ).animate( { scrollTop : 0 }, 200 );
+        return false;
+        } );
+    } );
+    </script>
+</body>
+</html>
