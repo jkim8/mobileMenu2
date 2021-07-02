@@ -13,18 +13,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
-    <script>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
         
     </script>
 <style>
     * {
-        font-family: 'Gamja Flower', cursive;    
+      font-family: 'Noto Sans KR', sans-serif;   
     }
 
     body {
     position: relative;
+    }
+    #navBar {
+      background-color: #091220;
     }
 
     /* #navBar {
@@ -39,20 +44,44 @@
         font-size: 18px;
     }
 
-    .categoryText {
-        font-size: 19px;
+    .mainTitleText {
+      color: white;
+      font-size: 18px;
     }
 
-    .list-group-item-dark {
-        color: white;
-        background-color: slategray;
+    .categoryText {
+        font-size: 22px;
+        border: none;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
+
+    .categoryText2 {
+        font-size: 15px;
+        border: none;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgba(28,28,28,.5);
+    }
+
+    .categoryText3 {
+        font-size: 15px;
+        border: none;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgba(28,28,28,.5);
+    }
+
+
 
 
     .titleText {
         font-weight: 900;
-        font-size: 22px;
+        font-size: 16px;
+        color: white !important;
     }
+
     .goToTheTop {
         width: 50px;
         height: 50px;
@@ -75,6 +104,35 @@
       margin: 0;
     }
 
+    .hamburger {
+      color: white;
+      
+    }
+
+    .menuText {
+      color: rgba(28,28,28,.5);
+      line-height: 1.2em;
+    }
+    .menuTitle {
+      color: rgba(28,28,28,.5);
+      font-size: 1.1em;
+      font-weight: 700;
+      line-height: 1.2em;
+    }
+
+    .menuSubTitle {
+      font-size: .8em;
+      font-style: italic;
+
+    }
+    .price {
+      margin: .5em 0;
+    }
+    .list-group-item {
+      border: none;
+    }
+    
+
 
 </style>
 </head>
@@ -85,12 +143,14 @@
           </svg>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navBar">
+    <nav class="navbar navbar-expand-lg navbar-light " id="navBar">
         <div class="container-fluid">
             
-          <a class="navbar-brand titleText" href="#"><img src="./image/logo.png" alt="">GOGI FRIENDS MENU</a>
+          <a class="navbar-brand titleText" href="#"><img src="./image/logo.png" alt="" ><span class="mainTitleText">GOGI FRIENDS MENU</span></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -125,102 +185,154 @@
 
 
       <ul class="list-group" data-bs-spy="scroll" data-bs-target="#navBar"   data-bs-offset="30" class="scrollspy-example" tabindex="0">
-        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading1">APPETIZERS</li>
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading1">APPETIZERS</li>
         <li class="list-group-item" >
-          <div class="row">
-            <div class="col-9">
-              <span >FRIED CALAMARI</span>
-              <P>fried calamari</P>
-            </div>
-            <div class="col-3 text-end">
-              <span class="badge bg-warning text-dark">$11</span>
-            </div>
+          <div class="text-center menuText">
+              <p class="menuTitle">FRIED CALAMARI</p>
+              <P class="menuSubTitle">fried calamari</P>
+              <p class="price">$11</p>
+          </div>
+        </li>
+
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">VEGI TEMPURA</p>
+              <P class="menuSubTitle">fried vegetables</P>
+              <p class="price">$10</p>
           </div>
         </li>
 
         <li class="list-group-item" >
-          <div class="row">
-            <div class="col-9">
-              <span >VEGI TEMPURA</span>
-              <P>야채 튀김 fried vegetables</P>
-            </div>
-            <div class="col-3 text-end">
-              <span class="badge bg-warning text-dark">$10</span>
-            </div>
+          <div class="text-center menuText">
+              <p class="menuTitle">MANDU</p>
+              <P class="menuSubTitle">house dumplings | steamed or fried </P>
+              <P class="menuSubTitle">[5pc] &nbsp&nbsp/&nbsp&nbsp[10pc]</P>
+              <p class="price">$7 / $13</p>
           </div>
         </li>
 
         <li class="list-group-item" >
-          <div class="row">
-            <div class="col-9">
-              <span >MANDU</span>
-              <P>만두  house dumplings | steamed or fried    [5pc]/[10pc]</P>
-            </div>
-            <div class="col-3 text-end">
-              <span class="badge bg-warning text-dark">$7 / $13</span>
-            </div>
+          <div class="text-center menuText">
+              <p class="menuTitle">KIMCHI JUN</p>
+              <P class="menuSubTitle">kimchi pancake</P>
+              <p class="price">$9</p>
           </div>
         </li>
 
+        
         <li class="list-group-item" >
-          <div class="row">
-            <div class="col-9">
-              <span >KIMCHI JUN</span>
-              <P>김치전  kimchi pancake</P>
-            </div>
-            <div class="col-3 text-end">
-              <span class="badge bg-warning text-dark">$9</span>
-            </div>
-          </div>
-        </li>
-
-        <li class="list-group-item" >
-          <div class="row">
-            <div class="col-9">
-              <span >HAEMUL PAJUN</span>
-              <P>해물 파전 * seafood pancake</P>
-            </div>
-            <div class="col-3 text-end">
-              <span class="badge bg-warning text-dark">$10</span>
-            </div>
+          <div class="text-center menuText">
+              <p class="menuTitle">HAEMUL PAJUN</p>
+              <P class="menuSubTitle">seafood pancake</P>
+              <p class="price">$10</p>
           </div>
         </li>
 
 
 
-        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading2">ENTREE</li>
-        <li class="list-group-item" ><span>BEEF BRISKET DOENJANG JJIGAE</span> |차돌 된장 찌개  soy bean paste soup with beef brisket    12</li>
-        <li class="list-group-item" ><spans>KIMCHI JJIGAE</spans> | 김치찌개  spicy kimchi soup, pork belly    13</li>
-        <li class="list-group-item" >YOOK KEH JANG | 육개장  spicy shredded brisket, vermicelli, veggies and egg  13</li>
-        <li class="list-group-item" >GALBI TANG | 갈비탕  beef short rib soup    15</li>
-        <li class="list-group-item" >GALBI DOLSOT BIBIMBAP | 갈비 돌솥 비빔밥  beef rib eye, vegetables, egg, stone pot    15</li>
-        <li class="list-group-item" >DOLSOT BIBIMBAP | 돌솥 비빔밥  vegetables, egg, stone pot    13</li>
-        <li class="list-group-item" >COLD NOODLE | 물냉면    13</li>
-        <li class="list-group-item" >SPICY COLD NOODLE | 비빔냉면   13</li>
 
 
-        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading3">ALL YOU CAN EAT LUNCH (11:00 AM – 3:00 PM)</li>
-        <li class="list-group-item list-group-item-secondary" id="scrollspyHeading3">ADULT $24 / PERSON, KIDS AGES 3 – 7 $12, AGES 8-10 $17</li>
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading2">ENTREE</li>
+        
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">BEEF BRISKET DOENJANG JJIGAE</p>
+              <P class="menuSubTitle">soy bean paste soup with beef brisket</P>
+              <p class="price">$12</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">KIMCHI JJIGAE</p>
+              <P class="menuSubTitle">spicy kimchi soup, pork belly</P>
+              <p class="price">$13</p>
+          </div>
+        </li>
+        
+
+        
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">YOOK KEH JANG</p>
+              <P class="menuSubTitle">spicy shredded brisket, vermicelli, veggies and egg</P>
+              <p class="price">$13</p>
+          </div>
+        </li>
+
+        
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">GALBI TANG</p>
+              <P class="menuSubTitle">beef short rib soup</P>
+              <p class="price">$15</p>
+          </div>
+        </li>
+
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">GALBI DOLSOT BIBIMBAP</p>
+              <P class="menuSubTitle">beef rib eye, vegetables, egg, stone pot</P>
+              <p class="price">$15</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">DOLSOT BIBIMBAP</p>
+              <P class="menuSubTitle">vegetables, egg, stone pot</P>
+              <p class="price">$13</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">COLD NOODLE</p>
+              <P class="menuSubTitle">cold nooble</P>
+              <p class="price">$13</p>
+          </div>
+        </li>
+
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">SPICY COLD NOODLE</p>
+              <P class="menuSubTitle">spicy cold nooble</P>
+              <p class="price">$13</p>
+          </div>
+        </li>
+        
+        
+      
+        
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading3">ALL YOU CAN EAT LUNCH</li>
+        <li class="categoryText2 list-group-item  fw-bolder" >11:00 AM – 3:00 PM</li>
+        <li class="categoryText3 list-group-item  fw-bolder" >ADULT $24 / PERSON, KIDS AGES 3 – 7 $12, AGES 8-10 $17</li>
+       
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">CHADOL BAKGI </p>
+              <P class="menuSubTitle">thin- sliced brisket</P>
+          </div>
+        </li>
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading4">ALL YOU CAN EAT(D)</li>
         <li class="list-group-item" ></li>
         <li class="list-group-item" ></li>
         <li class="list-group-item" ></li>
         <li class="list-group-item" ></li>
 
-        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading4">ALL YOU CAN EAT(D)</li>
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading5">COMBO</li>
         <li class="list-group-item" ></li>
         <li class="list-group-item" ></li>
         <li class="list-group-item" ></li>
         <li class="list-group-item" ></li>
 
 
-        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading5">COMBO</li>
-        <li class="list-group-item" ></li>
-        <li class="list-group-item" ></li>
-        <li class="list-group-item" ></li>
-        <li class="list-group-item" ></li>
-
-
-        <li class="categoryText list-group-item list-group-item-dark fw-bolder" id="scrollspyHeading6">ADD ON</li>
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading6">ADD ON</li>
         <li class="list-group-item" ></li>
         <li class="list-group-item" ></li>
         <li class="list-group-item" ></li>
