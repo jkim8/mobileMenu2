@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOGI FRIENDS</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        
+    </script>
+<style>
+    * {
+      font-family: 'Noto Sans KR', sans-serif;   
+    }
+
+    body {
+    position: relative;
+    }
+    #navBar {
+      background-color: #091220;
+      width: 100%;
+    }
+
+    /* #navBar {
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+
+    } */
+
+    span {
+        font-weight: 900;
+        font-size: 18px;
+    }
+
+    .mainTitleText {
+      color: white;
+      font-size: 16px;
+    }
+
+    .categoryText {
+        font-size: 24px;
+        border: none;
+        text-align: center;
+        margin-bottom: 5px;
+        margin-top: 45px;
+    }
+
+    .categoryText2 {
+        font-size: 15px;
+        border: none;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgba(28,28,28,.5);
+        margin-top: 30px;
+    }
+
+    .categoryText3 {
+        font-size: 15px;
+        border: none;
+        text-align: center;
+        margin-bottom: 10px;
+        color: rgba(28,28,28,.5);
+    }
+
+
+
+
+    .titleText {
+        font-weight: 900;
+        font-size: 16px;
+        color: white !important;
+    }
+
+    .goToTheTop {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        background-color: teal;
+        z-index: 20;
+        border-radius: 50%;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding-top: 5px;
+        bottom: 20px;
+        right: 20px;
+        
+    }
+    img {
+        width: 100px;
+    }
+    p {
+      margin: 0;
+    }
+
+    .hamburger {
+      color: white;
+      
+    }
+
+    .menuText {
+      color: #6d6d6d;
+      line-height: 1.2em;
+    }
+    .menuTitle {
+      color: rgba(28,28,28,.5);
+      font-size: 1em;
+      font-weight: 700;
+      line-height: 1.2em;
+    }
+
+    .menuSubTitle {
+      font-size: .8em;
+      font-style: italic;
+
+    }
+    .price {
+      margin: .5em 0;
+    }
+    .list-group-item {
+      border: none;
+    }
+    .pepper {
+      width: 17px;
+      vertical-align: inherit;
+    }
+
+    .menuNotice { 
+      font-style: italic;
+      font-size: 10px;
+    }
+    
+
+
+</style>
+</head>
+<body>
+    <div class="goToTheTop top" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light " id="navBar">
+        <div class="container-fluid">
+            
+          <a class="navbar-brand titleText" href="#"><img src="./image/logo.png" alt="" ><span class="mainTitleText">DRINK MENU</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading1" >SOFT DRINKS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading2" >SOJU COCKTAIL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading3" >SOJU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading4" >BEER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading5" >DRAFT BEER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading6" >BEER AND SOJU TOWER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading7" >WHITE WINE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading8" >RED WINE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading9" >KOREAN WINE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link titleText" href="#scrollspyHeading10" >SAKE</a>
+              </li>
+              <li class="nav-item">
+                <a style="color: red !important;" class="nav-link titleText" href="./index.html">GO BACK TO MENU</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+
+      <ul class="list-group" data-bs-spy="scroll" data-bs-target="#navBar"   data-bs-offset="30" class="scrollspy-example" tabindex="0">
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading1">SOFT DRINKS</li>
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">12 oz CAN SODA </p>
+              <P class="menuSubTitle">Coke, Sprite, Diet Coke, Ginger Ale</P>
+              <p class="price">$2</p>
+          </div>
+        </li>
+
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">JUICE</p>
+              <P class="menuSubTitle">Orange Juice, Cranberry Juice, Apple Juice </P>
+              <p class="price">$3</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">MILKIS </p>
+              <P class="menuSubTitle">MILKIS</P>
+              <p class="price">$3.5</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">REDBULL</p>
+              <P class="menuSubTitle">Red Bull</P>
+              <p class="price">$5</p>
+          </div>
+        </li>
+
+        
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">SPARKLING WATER</p>
+              <P class="menuSubTitle">25.3 oz</P>
+              <p class="price">$6</p>
+          </div>
+        </li>
+
+
+
+
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading2">SOJU COCKTAIL</li>
+        
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Original Mojito 16oz	</p>
+              <p class="price">$9</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Yuzu Soju Mojito (Citron Soju Mojito) 16oz</p>
+              <p class="price">$10</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Orange Soju Mojito	16oz</p>
+              <p class="price">$10</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Banana Soju Cocktail 16oz</p>
+              <p class="price">$10</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Pineapple Slush with whole Pineapple 16oz</p>
+              <p class="price">$20</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Soju punch ½ liter</p>
+              <p class="price">$18</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Soju punch 1 liter</p>
+              <p class="price">$28</p>
+          </div>
+        </li>
+
+
+      
+        
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading3">SOJU</li>
+       
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">CHUM CHURUM</p>
+            <p class="price">$14</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">CHUM CHURM FRESH</p>
+            <p class="price">$14</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">CHAMISUL</p>
+            <p class="price">$14</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">CHAMISUL FRESH</p>
+            <p class="price">$14</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">JINRO SOJU: BLUE BTL</p>
+            <p class="price">$14</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">JINRO GRAPEFRUIT</p>
+            <p class="price">$14</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">JINRO WHITE GRAPE</p>
+            <p class="price">$14</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">CHUM CHURUM PEACH</p>
+            <p class="price">$14</p>
+          </div>
+        </li>
+
+
+
+
+        
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading4">BEER</li>
+       
+       
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">HITE</p>
+            <p class="menuTitle">Korean Pale Lager</p>
+            <p class="price">Small-$6 / Large-$9</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">KLOUD</p>
+            <p class="menuTitle">Korean Malt Beer</p>
+            <p class="price">Small-$6 / Large-$9</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">MATCHA IPA Kyoto Matcha IPA</p>
+            <p class="price">$12</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">ASAHI </p>
+            <p class="price">Small-$6 / Large-$9</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">SAPPORO</p>
+            <p class="price">Small-$6 / Large-$9</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">SAM ADAMS</p>
+            <p class="price">$6</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">CORONA</p>
+            <p class="price">$6</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">MODELO</p>
+            <p class="price">$6</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">HEINEKEN</p>
+            <p class="price">$6</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">MILLER LITE</p>
+            <p class="price">$5</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">COORS LIGHT</p>
+            <p class="price">$5</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">BUDWEISER</p>
+            <p class="price">$5</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+            <p class="menuTitle">BUD LIGHT</p>
+            <p class="price">$5</p>
+          </div>
+        </li>
+
+
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading5">DRAFT BEER</li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">LITE</p>
+              <P class="menuSubTitle">Miller Lite</P>
+              <p class="price">glass/16oz-$5  &nbsp&nbsp pitcher-$13</p>
+          </div>
+        </li>
+
+        
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">YUENGLING</p>
+              <P class="menuSubTitle">Traditional Larger</P>
+              <p class="price">glass/16oz-$6  &nbsp&nbsp pitcher-$16</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">SAMUEL ADAMS </p>
+              <P class="menuSubTitle">Boston Larger</P>
+              <p class="price">glass/16oz-$6  &nbsp&nbsp pitcher-$16</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">BLUE MOON</p>
+              <P class="menuSubTitle">Belgian White</P>
+              <p class="price">glass/16oz-$7  &nbsp&nbsp pitcher-$18</p>
+          </div>
+        </li>
+
+
+
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading6" >BEER AND SOJU TOWER</li>
+       
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">½ PITCHER (1,000ml) + 1 SOJU (360ml)</p>
+              <p class="price">$25</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">1 PITCHER (2,000ml) + 2 SOJU (720ml)</p>
+              <p class="price">$40</p>
+          </div>
+        </li>
+
+
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading7">WHITE WINE</li>
+ 
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">SAUVIGNON BLANC</p>
+              <P class="menuSubTitle">Oyster Bay</P>
+              <p class="price">750ML&nbsp;&nbsp;$28&nbsp;/&nbsp;BTL</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">PINOT GRIGIO</p>
+              <P class="menuSubTitle">Bollini</P>
+              <p class="price">750ML&nbsp;&nbsp;$26&nbsp;/&nbsp;BTL</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">MOSCATO</p>
+              <P class="menuSubTitle">D’asti</P>
+              <p class="price">750ML&nbsp;&nbsp;$31&nbsp;/&nbsp;BTL</p>
+          </div>
+        </li>
+
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading8">RED WINE</li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">CABERNET SAUVIGNON</p>
+              <P class="menuSubTitle">Cannonball</P>
+              <p class="price">750ML&nbsp;&nbsp;$26&nbsp;/&nbsp;BTL</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">MERLOT</p>
+              <P class="menuSubTitle">Seabastiani</P>
+              <p class="price">750ML&nbsp;&nbsp;$31&nbsp;/&nbsp;BTL</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">MALBEC</p>
+              <P class="menuSubTitle">Finca El Origen</P>
+              <p class="price">750ML&nbsp;&nbsp;$22&nbsp;/&nbsp;BTL</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">PINOT NOIR</p>
+              <P class="menuSubTitle">Coppola Diamond collection</P>
+              <p class="price">750ML&nbsp;&nbsp;$32&nbsp;/&nbsp;BTL</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">HOUSE WINE</p>
+              <p class="price">$6&nbsp;/&nbsp;GLASS</p>
+          </div>
+        </li>
+
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading9">KOREAN WINE</li>
+        <li class="categoryText2 menuNotice list-group-item  fw-bolder" >Mkkoli is a milky, sweet alcoholic drink made from rice. It is the oldest traditional Korean rice wine, one of Korea’s most popular alcoholic drinks. It takes sweet and slightly tangy, with a cool aftertaste.
+        </li>
+
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">SSAL MAKKOLI </p>
+              <P class="menuSubTitle">Rice Wine</P>
+              <p class="price">$12</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">MAKKU</p>
+              <P class="menuSubTitle">Original, Mango, & Banana Flavor</P>
+              <p class="price">$5</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">ICING GRAPFRUIT </p>
+              <p class="price">$9</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">ICING WHITE GRAPE </p>
+              <p class="price">$9</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">BAEK SE JU</p>
+              <P class="menuSubTitle">Rice ginseng Wine</P>
+              <p class="price">$14</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">BOK BUN JA</p>
+              <P class="menuSubTitle">Raspberry Wine</P>
+              <p class="price">$14</p>
+          </div>
+        </li>
+
+
+
+        <li class="categoryText list-group-item  fw-bolder" id="scrollspyHeading10">SAKE</li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Narutotai Nama Genshu 720ML</p>
+              <p class="price">$50</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Amabuki Ginno Kurenani 720ML</p>
+              <p class="price">$50</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Wakatake Onikoroshi Daiginjo</p>
+              <p class="price">300ML&nbsp;-&nbsp;$30&nbsp;&nbsp; 	720ML&nbsp;-&nbsp;$70 </p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Dassai 45 “Otter Fest”	300ML </p>
+              <p class="price">$25</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Hana Kohaku 300ML</p>
+              <p class="price">$15</p>
+          </div>
+        </li>
+
+        <li class="list-group-item" >
+          <div class="text-center menuText">
+              <p class="menuTitle">Hakushika Snow Beauty 300ML</p>
+              <p class="price">$15</p>
+          </div>
+        </li>
+      
+
+
+
+      </ul>
+
+      <script>     
+         
+            var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: '#navBar'
+            })
+
+
+
+            $(".navbar-nav").click(function(){
+            $(".navbar-collapse").removeClass("show");
+            });
+
+
+   
+
+
+
+      </script>
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    $( document ).ready( function() {
+        $( window ).scroll( function() {
+        if ( $( this ).scrollTop() > 200 ) {
+            $( '.top' ).fadeIn();
+        } else {
+            $( '.top' ).fadeOut();
+        }
+        } );
+        $( '.top' ).click( function() {
+        $( 'html, body' ).animate( { scrollTop : 0 }, 200 );
+        return false;
+        } );
+    } );
+    </script>
+</body>
+</html>
